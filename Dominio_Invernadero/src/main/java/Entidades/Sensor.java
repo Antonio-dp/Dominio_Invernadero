@@ -27,11 +27,11 @@ public class Sensor {
         this.modelo = modelo;
     }
 
-    public ObjectId getIdSensor() {
+    public ObjectId getId() {
         return _id;
     }
 
-    public void setIdSensor(ObjectId idSensor) {
+    public void setId(ObjectId idSensor) {
         this._id = idSensor;
     }
 

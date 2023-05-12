@@ -33,13 +33,11 @@ public class Registro {
         this._id = _id;
     }
 
-    
-
-    public ObjectId getIdRegistro() {
+    public ObjectId getId() {
         return _id;
     }
 
-    public void setIdRegistro(ObjectId _id) {
+    public void setId(ObjectId _id) {
         this._id = _id;
     }
 
