@@ -35,11 +35,11 @@ public class Alarma {
         this._id = idAlarma;
     }
     
-    public ObjectId getIdAlarma() {
+    public ObjectId getId() {
         return _id;
     }
 
-    public void setIdAlarma(ObjectId idAlarma) {
+    public void setId(ObjectId idAlarma) {
         this._id = idAlarma;
     }
 
