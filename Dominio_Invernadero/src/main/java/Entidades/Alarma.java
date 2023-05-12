@@ -11,23 +11,24 @@ import org.bson.types.ObjectId;
  */
 public class Alarma {
     private ObjectId idAlarma;
-    private Date fechaProgramada;
+    private String tipo;
+    private float limite;
     private Sensor sensor;
 
     public Alarma() {
     }
 
-    public Alarma(ObjectId idAlarma, Date fechaProgramada, Sensor sensor) {
+    public Alarma(ObjectId idAlarma, String tipo, float limite, Sensor sensor) {
         this.idAlarma = idAlarma;
-        this.fechaProgramada = fechaProgramada;
+        this.tipo = tipo;
+        this.limite = limite;
         this.sensor = sensor;
     }
 
-    public Alarma(Date fechaProgramada, Sensor sensor) {
-        this.fechaProgramada = fechaProgramada;
-        this.sensor = sensor;
+    public Alarma(ObjectId idAlarma) {
+        this.idAlarma = idAlarma;
     }
-
+    
     public ObjectId getIdAlarma() {
         return idAlarma;
     }
@@ -36,12 +37,20 @@ public class Alarma {
         this.idAlarma = idAlarma;
     }
 
-    public Date getFechaProgramada() {
-        return fechaProgramada;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setFechaProgramada(Date fechaProgramada) {
-        this.fechaProgramada = fechaProgramada;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public float getLimite() {
+        return limite;
+    }
+
+    public void setLimite(float limite) {
+        this.limite = limite;
     }
 
     public Sensor getSensor() {
@@ -51,7 +60,5 @@ public class Alarma {
     public void setSensor(Sensor sensor) {
         this.sensor = sensor;
     }
-    
-    
     
 }
