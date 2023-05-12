@@ -24,6 +24,12 @@ public class Alarma {
         this.limite = limite;
         this.sensor = sensor;
     }
+    
+    public Alarma(String tipo, float limite, Sensor sensor) {
+        this.tipo = tipo;
+        this.limite = limite;
+        this.sensor = sensor;
+    }
 
     public Alarma(ObjectId idAlarma) {
         this.idAlarma = idAlarma;
