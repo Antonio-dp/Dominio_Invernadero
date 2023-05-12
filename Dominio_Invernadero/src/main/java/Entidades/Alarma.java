@@ -10,7 +10,7 @@ import org.bson.types.ObjectId;
  * @author tonyd
  */
 public class Alarma {
-    private ObjectId idAlarma;
+    private ObjectId _id;
     private String tipo;
     private float limite;
     private Sensor sensor;
@@ -19,7 +19,7 @@ public class Alarma {
     }
 
     public Alarma(ObjectId idAlarma, String tipo, float limite, Sensor sensor) {
-        this.idAlarma = idAlarma;
+        this._id = idAlarma;
         this.tipo = tipo;
         this.limite = limite;
         this.sensor = sensor;
@@ -32,15 +32,15 @@ public class Alarma {
     }
 
     public Alarma(ObjectId idAlarma) {
-        this.idAlarma = idAlarma;
+        this._id = idAlarma;
     }
     
     public ObjectId getIdAlarma() {
-        return idAlarma;
+        return _id;
     }
 
     public void setIdAlarma(ObjectId idAlarma) {
-        this.idAlarma = idAlarma;
+        this._id = idAlarma;
     }
 
     public String getTipo() {

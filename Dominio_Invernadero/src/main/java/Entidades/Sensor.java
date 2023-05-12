@@ -9,7 +9,7 @@ import org.bson.types.ObjectId;
  * @author tonyd
  */
 public class Sensor {
-    private ObjectId idSensor;
+    private ObjectId _id;
     private String zona;
     private String modelo;
 
@@ -17,7 +17,7 @@ public class Sensor {
     }
 
     public Sensor(ObjectId idSensor, String zona, String modelo) {
-        this.idSensor = idSensor;
+        this._id = idSensor;
         this.zona = zona;
         this.modelo = modelo;
     }
@@ -28,11 +28,11 @@ public class Sensor {
     }
 
     public ObjectId getIdSensor() {
-        return idSensor;
+        return _id;
     }
 
     public void setIdSensor(ObjectId idSensor) {
-        this.idSensor = idSensor;
+        this._id = idSensor;
     }
 
     public String getZona() {

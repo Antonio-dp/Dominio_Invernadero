@@ -12,7 +12,7 @@ import org.bson.types.ObjectId;
  * @author Vastem
  */
 public class Registro {
-    private ObjectId idRegistro;
+    private ObjectId _id;
     private String humedad;
     private String temperatura;
     private Calendar fecha;
@@ -22,25 +22,25 @@ public class Registro {
     }
 
     public Registro(ObjectId idRegistro, String humedad, String temperatura, Calendar fecha, Sensor sensor) {
-        this.idRegistro = idRegistro;
+        this._id = idRegistro;
         this.humedad = humedad;
         this.temperatura = temperatura;
         this.fecha = fecha;
         this.sensor = sensor;
     }
 
-    public Registro(ObjectId idRegistro) {
-        this.idRegistro = idRegistro;
+    public Registro(ObjectId _id) {
+        this._id = _id;
     }
 
     
 
     public ObjectId getIdRegistro() {
-        return idRegistro;
+        return _id;
     }
 
-    public void setIdRegistro(ObjectId idRegistro) {
-        this.idRegistro = idRegistro;
+    public void setIdRegistro(ObjectId _id) {
+        this._id = _id;
     }
 
     
