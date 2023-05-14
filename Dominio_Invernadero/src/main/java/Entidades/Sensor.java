@@ -12,6 +12,7 @@ public class Sensor {
     private ObjectId _id;
     private String zona;
     private String modelo;
+    private String identificador;
 
     public Sensor() {
     }
@@ -26,6 +27,13 @@ public class Sensor {
         this.zona = zona;
         this.modelo = modelo;
     }
+
+    public Sensor(String zona, String modelo, String identificador) {
+        this.zona = zona;
+        this.modelo = modelo;
+        this.identificador = identificador;
+    }
+    
 
     public ObjectId getId() {
         return _id;
@@ -49,6 +57,14 @@ public class Sensor {
 
     public void setModelo(String modelo) {
         this.modelo = modelo;
+    }
+
+    public String getIdentificador() {
+        return identificador;
+    }
+
+    public void setIdentificador(String identificador) {
+        this.identificador = identificador;
     }
     
     
