@@ -13,21 +13,29 @@ import org.bson.types.ObjectId;
  */
 public class Registro {
     private ObjectId _id;
-    private String humedad;
-    private String temperatura;
+    private float humedad;
+    private float temperatura;
     private Calendar fecha;
     private Sensor sensor;
 
     public Registro() {
     }
 
-    public Registro(ObjectId idRegistro, String humedad, String temperatura, Calendar fecha, Sensor sensor) {
+    public Registro(ObjectId idRegistro, float humedad, float temperatura, Calendar fecha, Sensor sensor) {
         this._id = idRegistro;
         this.humedad = humedad;
         this.temperatura = temperatura;
         this.fecha = fecha;
         this.sensor = sensor;
     }
+
+    public Registro(float humedad, float temperatura, Calendar fecha, Sensor sensor) {
+        this.humedad = humedad;
+        this.temperatura = temperatura;
+        this.fecha = fecha;
+        this.sensor = sensor;
+    }
+    
 
     public Registro(ObjectId _id) {
         this._id = _id;
@@ -40,22 +48,20 @@ public class Registro {
     public void setId(ObjectId _id) {
         this._id = _id;
     }
-
     
-    
-    public String getHumedad() {
+    public float getHumedad() {
         return humedad;
     }
 
-    public void setHumedad(String humedad) {
+    public void setHumedad(float humedad) {
         this.humedad = humedad;
     }
 
-    public String getTemperatura() {
+    public float getTemperatura() {
         return temperatura;
     }
 
-    public void setTemperatura(String temperatura) {
+    public void setTemperatura(float temperatura) {
         this.temperatura = temperatura;
     }
 
