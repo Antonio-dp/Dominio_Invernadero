@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Entidades;
-import java.util.Date;
 import org.bson.types.ObjectId;
 /**
  *
@@ -12,24 +11,28 @@ import org.bson.types.ObjectId;
 public class Alarma {
     private ObjectId _id;
     private String tipo;
-    private float limite;
-    private Sensor sensor;
+    private float limiteInferior;
+    private float limiteSuperior;
+    private ObjectId sensor;
 
     public Alarma() {
     }
 
-    public Alarma(ObjectId idAlarma, String tipo, float limite, Sensor sensor) {
+    public Alarma(ObjectId idAlarma, String tipo, float limiteInferior, float limiteSuperior, ObjectId sensor) {
         this._id = idAlarma;
         this.tipo = tipo;
-        this.limite = limite;
+        this.limiteInferior = limiteInferior;
+        this.limiteSuperior = limiteSuperior;
+        this.sensor = sensor;
+    }
+
+    public Alarma(String tipo, float limiteInferior, float limiteSuperior, ObjectId sensor) {
+        this.tipo = tipo;
+        this.limiteInferior = limiteInferior;
+        this.limiteSuperior = limiteSuperior;
         this.sensor = sensor;
     }
     
-    public Alarma(String tipo, float limite, Sensor sensor) {
-        this.tipo = tipo;
-        this.limite = limite;
-        this.sensor = sensor;
-    }
 
     public Alarma(ObjectId idAlarma) {
         this._id = idAlarma;
@@ -51,19 +54,27 @@ public class Alarma {
         this.tipo = tipo;
     }
 
-    public float getLimite() {
-        return limite;
+    public float getLimiteInferior() {
+        return limiteInferior;
     }
 
-    public void setLimite(float limite) {
-        this.limite = limite;
+    public void setLimiteInferior(float limiteInferior) {
+        this.limiteInferior = limiteInferior;
     }
 
-    public Sensor getSensor() {
+    public float getLimiteSuperior() {
+        return limiteSuperior;
+    }
+
+    public void setLimiteSuperior(float limiteSuperior) {
+        this.limiteSuperior = limiteSuperior;
+    }
+
+    public ObjectId getSensor() {
         return sensor;
     }
 
-    public void setSensor(Sensor sensor) {
+    public void setSensor(ObjectId sensor) {
         this.sensor = sensor;
     }
     
