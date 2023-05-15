@@ -4,7 +4,7 @@
  */
 package Entidades;
 
-import java.util.Calendar;
+import java.util.Date;
 import org.bson.types.ObjectId;
 
 /**
@@ -15,13 +15,13 @@ public class Registro {
     private ObjectId _id;
     private float humedad;
     private float temperatura;
-    private Calendar fecha;
+    private Date fecha;
     private Sensor sensor;
 
     public Registro() {
     }
 
-    public Registro(ObjectId idRegistro, float humedad, float temperatura, Calendar fecha, Sensor sensor) {
+    public Registro(ObjectId idRegistro, float humedad, float temperatura, Date fecha, Sensor sensor) {
         this._id = idRegistro;
         this.humedad = humedad;
         this.temperatura = temperatura;
@@ -29,7 +29,7 @@ public class Registro {
         this.sensor = sensor;
     }
 
-    public Registro(float humedad, float temperatura, Calendar fecha, Sensor sensor) {
+    public Registro(float humedad, float temperatura, Date fecha, Sensor sensor) {
         this.humedad = humedad;
         this.temperatura = temperatura;
         this.fecha = fecha;
@@ -65,11 +65,11 @@ public class Registro {
         this.temperatura = temperatura;
     }
 
-    public Calendar getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(Calendar fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 
@@ -80,7 +80,5 @@ public class Registro {
     public void setSensor(Sensor sensor) {
         this.sensor = sensor;
     }
-    
-    
     
 }
