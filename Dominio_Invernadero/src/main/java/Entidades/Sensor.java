@@ -3,13 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Entidades;
+
+import org.bson.codecs.pojo.annotations.BsonId;
 import org.bson.types.ObjectId;
+
 /**
  *
  * @author tonyd
  */
 public class Sensor {
-    private ObjectId _id;
+
+    @BsonId
+    private String _id;
     private String zona;
     private String modelo;
     private String identificador;
@@ -17,10 +22,11 @@ public class Sensor {
     public Sensor() {
     }
 
-    public Sensor(ObjectId idSensor, String zona, String modelo) {
+    public Sensor(String idSensor, String zona, String modelo, String identificador) {
         this._id = idSensor;
         this.zona = zona;
         this.modelo = modelo;
+        this.identificador = identificador;
     }
 
     public Sensor(String zona, String modelo) {
@@ -33,13 +39,12 @@ public class Sensor {
         this.modelo = modelo;
         this.identificador = identificador;
     }
-    
 
-    public ObjectId getId() {
+    public String getId() {
         return _id;
     }
 
-    public void setId(ObjectId idSensor) {
+    public void setId(String idSensor) {
         this._id = idSensor;
     }
 
@@ -66,6 +71,5 @@ public class Sensor {
     public void setIdentificador(String identificador) {
         this.identificador = identificador;
     }
-    
-    
+
 }
