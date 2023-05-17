@@ -13,24 +13,21 @@ public class Alarma {
     private String tipo;
     private float limiteInferior;
     private float limiteSuperior;
-    private ObjectId sensor;
 
     public Alarma() {
     }
 
-    public Alarma(ObjectId idAlarma, String tipo, float limiteInferior, float limiteSuperior, ObjectId sensor) {
+    public Alarma(ObjectId idAlarma, String tipo, float limiteInferior, float limiteSuperior) {
         this._id = idAlarma;
         this.tipo = tipo;
         this.limiteInferior = limiteInferior;
         this.limiteSuperior = limiteSuperior;
-        this.sensor = sensor;
     }
 
-    public Alarma(String tipo, float limiteInferior, float limiteSuperior, ObjectId sensor) {
+    public Alarma(String tipo, float limiteInferior, float limiteSuperior) {
         this.tipo = tipo;
         this.limiteInferior = limiteInferior;
         this.limiteSuperior = limiteSuperior;
-        this.sensor = sensor;
     }
     
 
@@ -68,14 +65,6 @@ public class Alarma {
 
     public void setLimiteSuperior(float limiteSuperior) {
         this.limiteSuperior = limiteSuperior;
-    }
-
-    public ObjectId getSensor() {
-        return sensor;
-    }
-
-    public void setSensor(ObjectId sensor) {
-        this.sensor = sensor;
     }
     
 }
